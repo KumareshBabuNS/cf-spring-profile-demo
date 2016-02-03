@@ -1,0 +1,11 @@
+---
+applications:
+- name: cf-spring-profile-demo
+  host: cf-spring-profile-demo-${random-word}
+  memory: 512MB
+  instances: 1
+  path: target/cf-spring-profile-demo-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack_offline
+  services:
+  - db
+  - my-service
